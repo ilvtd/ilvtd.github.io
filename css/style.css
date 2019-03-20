@@ -1,0 +1,42 @@
+img {
+	width: 700px;
+}
+
+@media print {    
+	body { font-size: 10pt }
+}
+
+@media screen {   
+	body { font-size: 13px }
+}
+
+@media handheld { 
+   body { font-size: 10px }
+}
+
+@media screen, print {    
+	body { line-height: 1.2 }
+}
+
+ul li {    
+	display: inline;
+}
+
+@media screen and (max-width: 480px) {    
+	ul li  {    
+		display: block;
+	}
+}
+
+nav select {
+	display: none;
+}
+
+@media (max-width: 960px) {  
+	nav ul     { display: none; }  
+	nav select { display: inline-block; }
+	
+	img {
+		width: 250px;
+	}
+}
