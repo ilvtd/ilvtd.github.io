@@ -34,12 +34,10 @@ h3
 
 .container div
 {
-    //the child
     padding: 20px;
     margin: 7px;
     border: 1px solid #e82c90;
     flex: 0 1 10em;
-    // item property flex: flex-grow flex-shrink flex-basis;
 }
 
 .boxen
