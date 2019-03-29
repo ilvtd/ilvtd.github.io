@@ -55,7 +55,7 @@ h3
     margin: auto;
     height: auto;
 }
-
+    
 .bottomFlex
 {
     display: flex;
@@ -91,12 +91,16 @@ h3
 	   text-align:center;
 }
 
+.italic
+{
+    font-style: italic;
+}
+
 .smallImage 
 {
 	margin: auto;
 	overflow: auto;
 	text-align:center;
-	font-style: italic;
 	padding:5px;
 }
 	
