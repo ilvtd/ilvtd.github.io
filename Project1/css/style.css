@@ -1,3 +1,5 @@
+/* flex code from https://www.sketchingwithcss.com/samplechapter/cheatsheet.html */
+
 body 
 {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -17,10 +19,8 @@ h1
 img
 {
 	display: block;
-
 	height: auto;
 	margin: auto;
-
     padding: 20px;
 }
 
@@ -46,7 +46,6 @@ h3
 .container
 {
     display: flex;
-
 	justify-content: center;
 	width:80%;
 	margin: auto;
@@ -64,7 +63,6 @@ h3
     justify-content: center;
 	padding-top:20px;
     width:100%;
-  
 }
 
 .boxen
@@ -72,7 +70,6 @@ h3
     display: flex;
     flex-direction: column;
     align-items: center;
-	
 }
 
 .imageContainer1
@@ -80,11 +77,13 @@ h3
        
 	   text-align:center;
 }
+
 .imageContainer2
 {
        
 	   text-align:center;
 }
+
 .imageContainer3
 {
       
@@ -105,8 +104,7 @@ h3
 }
 	
 .smallImage img
-{
-        
+{ 
 	padding: 5px;
 }
 
@@ -123,15 +121,18 @@ h3
     {
         width: 170px;
     }
+
     .smallImage img
     {
         width: 50px;
 		
     }
+
 	.topImage img
     {
         width: 50px;
     }
+
     .imageContainer
     {
         display: flex;
@@ -140,6 +141,7 @@ h3
 		padding-top: 20px;
         justify-content: center;
     }
+
     .TopFlex
     {
         display: flex;
@@ -148,6 +150,7 @@ h3
         align-items: top;
         justify-content: center;
     }
+
 	.item
 	{
         padding-top: 20px;
@@ -158,10 +161,12 @@ h3
 		margin-left: auto;
 		margin-right: auto;
 	}
+
 	.container
 	{
 		width:100%;
 	}
+
     .text
     {
 		padding: 20px;
@@ -176,15 +181,18 @@ h3
     {
         width: 170px;
     }
+
     .smallImage img
     {
         width: 50px;
 		
     }
+
 	.topImage img
     {
         width: 50px;
     }
+
     .imageContainer
     {
         display: flex;
@@ -193,6 +201,7 @@ h3
 		padding-top: 20px;
         justify-content: center;
     }
+
     .TopFlex
     {
         display: flex;
@@ -201,6 +210,7 @@ h3
         align-items: top;
         justify-content: center;  
     }
+
 	.item
 	{
 		padding-top: 20px;
@@ -210,6 +220,7 @@ h3
 		margin-left: auto;
 		margin-right: auto;
 	}
+
 	.container
 	{
 		width:80%;
@@ -229,15 +240,18 @@ h3
     {
         width: 250px;
     }
+
     .smallImage img
     {
         width: 50px;
 		
     }
+
 	.topImage img
     {
         width: 50px;
     }
+
     .imageContainer
     {
         display: flex;
@@ -246,11 +260,11 @@ h3
 		padding-top: 20px;
         justify-content: center;
     }
+
     .TopFlex
     {
         display: flex;
         flex-direction: row;
-       
         align-items: top;
         justify-content: center;
   
