@@ -68,14 +68,12 @@
 			var gamma = event.gamma;
 		if(alpha!=null || beta!=null || gamma!=null) 
 		{
-    		dataContainerOrientation.innerHTML = 'alpha: ' + alpha + '<br/>beta: ' + beta + '<br />gamma: ' + gamma;
+    		dataContainerOrientation.innerHTML = 'Orientation:<br/> '+'<br/>'+ 'alpha: ' + alpha + '<br/>beta: ' + beta + '<br />gamma: ' + gamma;
   		}
 
-		
 
 		}, false);
 
-		
 	}
 
 	if(window.DeviceMotionEvent) 
@@ -86,9 +84,9 @@
                 var y = event.accelerationIncludingGravity.y;
                 var z = event.accelerationIncludingGravity.z;
                 var r = event.rotationRate;
-                var html = 'Acceleration:<br />';
+                var html = 'Acceleration:<br />'+'<br/>'+;
                 html += 'x: ' + x +'<br />y: ' + y + '<br/>z: ' + z+ '<br />';
-                html += 'Rotation rate:<br />';
+                html += 'Rotation rate:<br />'+'<br/>'+;
                 if(r!=null) html += 'alpha: ' + r.alpha +'<br />beta: ' + r.beta + '<br/>gamma: ' + r.gamma + '<br />';
                 dataContainerMotion.innerHTML = html;
               });
