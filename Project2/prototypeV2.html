@@ -20,13 +20,12 @@ function getLocation() {
 }
 
 function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-  
-  // array of coordinates of each vertex of the polygon
-var polygon = [[174.7754565,-41.2951859],[174.7753883,-41.2952533],[174.775411,-41.2952595],[174.7754188,-41.2952464],[174.7760726,-41.2954519],[174.7761373,-41.295255],[174.7759403,-41.295202],[174.7757388,-41.2951518],[174.7757491,-41.2951285],[174.7754818, -41.295084],[174.7754565,-41.2951859] ];
+   
+	  // array of coordinates of each vertex of the polygon
+	var polygon = [[174.7754565,-41.2951859],[174.7753883,-41.2952533],[174.775411,-41.2952595],[174.7754188,-41.2952464],[174.7760726,-41.2954519],[174.7761373,-41.295255],[174.7759403,-41.295202],[174.7757388,-41.2951518],[174.7757491,-41.2951285],[174.7754818, -41.295084],[174.7754565,-41.2951859] ];
 
-console.log(inside([position.coords.latitude, position.coords.longitude], polygon));
+	x.innerHTML = "Latitude: " + position.coords.latitude + 
+	  "<br>Longitude: " + position.coords.longitude + "<br>"+(inside([position.coords.latitude, position.coords.longitude], polygon));
 }
 
 function showError(error) {
