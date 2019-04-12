@@ -64,7 +64,7 @@ function giveAchievement(position, polygon)
 
 	if(inside([position.coords.longitude, position.coords.latitude], polygon) == true || gotAchievement == true)
 	{
-		var gotAchievement = true;
+		gotAchievement = true;
 		x.innerHTML = ("You get an achievement :) "+ gotAchievement + " <br> Inside? " + inside([position.coords.longitude, position.coords.latitude], polygon));
 	}
 	else
