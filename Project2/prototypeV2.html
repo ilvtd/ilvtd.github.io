@@ -22,10 +22,16 @@ function getLocation() {
 function showPosition(position) {
    
 	  // array of coordinates of each vertex of the polygon
-	var polygon = [[174.7754565,-41.2951859],[174.7753883,-41.2952533],[174.775411,-41.2952595],[174.7754188,-41.2952464],[174.7760726,-41.2954519],[174.7761373,-41.295255],[174.7759403,-41.295202],[174.7757388,-41.2951518],[174.7757491,-41.2951285],[174.7754818, -41.295084],[174.7754565,-41.2951859] ];
+    var polygon = [[174.7753883,-41.2952533],[174.7753813,-41.2952673],[174.7752739,-41.2954518],[174.7752516,-41.2954459],[174.7751144,-41.295707],[174.7752755,-41.2957596], [174.7751692, -41.2959513],[ 174.7754852,-41.2960513],[ 174.7755912,-41.295864],[174.7756514,-41.295757],[174.7758569,-41.2958263],[174.7758671,-41.2958163],[
+    174.7760726,-41.2954519],[174.7754188,-41.2952464],[174.775411,-41.2952595],[174.7753883,-41.2952533]];
 
-	x.innerHTML = "Latitude: " + position.coords.latitude + 
-	  "<br>Longitude: " + position.coords.longitude + "<br>"+(inside([position.coords.latitude, position.coords.longitude], polygon));
+    //console.log(inside([174.7753863, -41.2952583], polygon));//true
+    //console.log(inside([174.775307, -41.2959479], polygon));//in Uni
+    //console.log(inside([174.7752769, -41.2959613], polygon));//in Uni
+    console.log(inside([173.7752769, -41.2959613], polygon));//in Uni
+
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+	  "<br>Longitude: " + position.coords.longitude + "<br>" + inside([position.coords.longitude, position.coords.latitude], polygon);
 }
 
 function showError(error) {
@@ -44,8 +50,6 @@ function showError(error) {
       break;
   }
 }
-
-
 
 function inside(point, vs) {
     // ray-casting algorithm based on
