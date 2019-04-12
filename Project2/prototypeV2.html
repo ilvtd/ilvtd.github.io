@@ -11,19 +11,21 @@
 <script>
 var x = document.getElementById("demo");
 
-function getLocation() {
-  if (navigator.geolocation) {
+function getLocation() 
+{
+  if (navigator.geolocation) 
+  {
     navigator.geolocation.watchPosition(showPosition, showError);
   } else { 
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
 }
 
-function showPosition(position) {
+function showPosition(position) 
+{
    
 	  // array of coordinates of each vertex of the polygon
-    var polygon = [[174.7753883,-41.2952533],[174.7753813,-41.2952673],[174.7752739,-41.2954518],[174.7752516,-41.2954459],[174.7751144,-41.295707],[174.7752755,-41.2957596], [174.7751692, -41.2959513],[ 174.7754852,-41.2960513],[ 174.7755912,-41.295864],[174.7756514,-41.295757],[174.7758569,-41.2958263],[174.7758671,-41.2958163],[
-    174.7760726,-41.2954519],[174.7754188,-41.2952464],[174.775411,-41.2952595],[174.7753883,-41.2952533]];
+    var polygon = [[174.7753883,-41.2952533],[174.7753813,-41.2952673],[174.7752739,-41.2954518],[174.7752516,-41.2954459],[174.7751144,-41.295707],[174.7752755,-41.2957596], [174.7751692, -41.2959513],[ 174.7754852,-41.2960513],[ 174.7755912,-41.295864],[174.7756514,-41.295757],[174.7758569,-41.2958263],[174.7758671,-41.2958163],[174.7760726,-41.2954519],[174.7754188,-41.2952464],[174.775411,-41.2952595],[174.7753883,-41.2952533]];
 
     //console.log(inside([174.7753863, -41.2952583], polygon));//true
     //console.log(inside([174.775307, -41.2959479], polygon));//in Uni
@@ -32,10 +34,14 @@ function showPosition(position) {
 
     x.innerHTML = "Latitude: " + position.coords.latitude + 
 	  "<br>Longitude: " + position.coords.longitude + "<br>" + inside([position.coords.longitude, position.coords.latitude], polygon);
+
+	  giveAchievement(position, polygon);
 }
 
-function showError(error) {
-  switch(error.code) {
+function showError(error) 
+{
+  switch(error.code) 
+  {
     case error.PERMISSION_DENIED:
       x.innerHTML = "User denied the request for Geolocation."
       break;
@@ -51,7 +57,23 @@ function showError(error) {
   }
 }
 
-function inside(point, vs) {
+function giveAchievement(position, polygon)
+{
+	var gotAchievement = false;
+
+	if(inside([position.coords.longitude, position.coords.latitude], polygon) == true || gotAchievement == true)
+	{
+		var gotAchievement = true;
+		x.innerHTML = ("You get an achievement :) "+ gotAchievement + " <br> Inside? " + inside([position.coords.longitude, position.coords.latitude], polygon));
+	}
+	else
+	{
+		x.innerHTML = ("no achievement :( "+ gotAchievement + " <br> Inside? " + inside([position.coords.longitude, position.coords.latitude], polygon));
+	}
+}
+
+function inside(point, vs) 
+{
     // ray-casting algorithm based on
     // http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html
 
